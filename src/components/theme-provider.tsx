@@ -5,6 +5,7 @@ import {
   ThemeProvider as NextThemesProvider,
   ThemeProviderProps,
 } from "next-themes"
+import { Toaster } from "sonner"
 
 import ThemeToggle from "./theme-toggle"
 
@@ -13,6 +14,7 @@ export function ThemeProvider({ children, ...props }: ThemeProviderProps) {
     <NextThemesProvider {...props}>
       <main className="bg-[#efefef] dark:bg-[#090909]">{children}</main>
       <ThemeToggle />
+      <Toaster />
     </NextThemesProvider>
   )
 }

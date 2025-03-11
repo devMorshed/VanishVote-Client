@@ -77,7 +77,7 @@ export default function CreatePoll() {
         throw new Error("Failed to create poll")
       }
 
-      const data = await response.json()
+      const { data } = await response.json()
       const pollId = data.id
 
       toast.success("Poll created successfully!")
