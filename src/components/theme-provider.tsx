@@ -11,7 +11,7 @@ import ThemeToggle from "./theme-toggle"
 export function ThemeProvider({ children, ...props }: ThemeProviderProps) {
   return (
     <NextThemesProvider {...props}>
-      {children}
+      <main className="bg-[#efefef] dark:bg-[#090909]">{children}</main>
       <ThemeToggle />
     </NextThemesProvider>
   )
