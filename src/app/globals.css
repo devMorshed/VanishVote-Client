@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));
 
 :root {
   --background: #ffffff;
@@ -13,13 +14,6 @@
 @theme {
   --font-notepen: var(--font-notepen);
   --font-cinzel: var(--font-cinzel);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
 }
 
 body {

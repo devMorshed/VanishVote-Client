@@ -4,6 +4,10 @@ import localFont from "next/font/local"
 
 import "./globals.css"
 
+import { ThemeProvider } from "next-themes"
+
+import ThemeToggle from "@/components/theme-toggle"
+
 const notepen = localFont({
   src: "../../public/fonts/notepen.otf",
   display: "swap",
@@ -29,7 +33,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${notepen.variable} ${cinzel.variable} antialiased`}>
-        {children}
+        <ThemeProvider attribute="data-theme">
+          {children}
+          <ThemeToggle />
+        </ThemeProvider>
       </body>
     </html>
   )
